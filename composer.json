@@ -1,0 +1,21 @@
+{
+  "name": "spatial/psr7",
+  "description": "PSR 7 (GuzzleHttp) implementation for Spatial Framework. Request & Response Classes for spatial-mediator & spatial-route",
+  "type": "library",
+  "require": {
+    "psr/http-message": "^1.0",
+    "guzzlehttp/psr7": "^1.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Spatial\\Psr7\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "projectair",
+      "email": "airdesign.code@gmail.com"
+    }
+  ]
+}
