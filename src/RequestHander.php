@@ -8,8 +8,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 class RequestHandler implements RequestHandlerInterface
 {
-    private $response;
-    
+    protected $response;
+
     function __construct()
     {
         $this->response = new Response();
