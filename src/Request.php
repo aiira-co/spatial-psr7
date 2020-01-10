@@ -3,7 +3,6 @@
 namespace Spatial\Psr7;
 
 use GuzzleHttp\Psr7\ServerRequest;
-use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * Server-side HTTP request
@@ -19,11 +18,11 @@ use Psr\Http\Message\ServerRequestInterface;
  * implemented such that they retain the internal state of the current
  * message and return a new instance that contains the changed state.
  */
-class Request extends ServerRequest implements ServerRequestInterface
+class Request extends ServerRequest
 {
-    function __construct()
+    public function __construct()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
             $httpRequest = $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'];
         } else {
             $httpRequest = $_SERVER['REQUEST_METHOD'];
