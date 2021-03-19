@@ -22,11 +22,11 @@ class Request extends ServerRequest
 {
     public function __construct()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-            $httpRequest = $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'];
-        } else {
-            $httpRequest = $_SERVER['REQUEST_METHOD'];
-        }
-        parent::__construct($httpRequest, $_SERVER['REQUEST_URI']);
+//        if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+//            $httpRequest = $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD'];
+//        } else {
+//            $httpRequest = $_SERVER['REQUEST_METHOD'];
+//        }
+        parent::__construct('GET', '');
     }
 }
