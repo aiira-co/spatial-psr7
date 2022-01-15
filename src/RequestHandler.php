@@ -15,6 +15,9 @@ class RequestHandler implements RequestHandlerInterface
         $this->response = new Response();
     }
 
+    /**
+     * @throws \JsonException
+     */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $payload = json_encode(
